@@ -1,0 +1,27 @@
+body {
+	background-color: #131317;
+}
+
+h1,h2,h3,h4 {
+	color: #FFA500;
+}
+
+a,p {
+	color: #fff;
+}
+
+#head {
+	background-image: url("https://media.discordapp.net/attachments/692375435295850537/702190920329592902/2020-04-21_18.09.36.png");
+}
+
+#banner1 {
+	background-image: url("https://media.discordapp.net/attachments/692375435295850537/702190945432633385/2020-04-21_18.10.14.png");
+}
+
+#banner2 {
+	background-image: url("https://media.discordapp.net/attachments/692375435295850537/702190908023504906/2020-04-21_18.08.33.png");
+}
+
+#banner3 {
+	background-image: url("https://media.discordapp.net/attachments/692375435295850537/702190945432633385/2020-04-21_18.10.14.png");
+}
