@@ -18,10 +18,6 @@ The official Website for SoulGames.de
 
 - Check for mainteance
 
-##### impressum/index.html
-
-- All Site (copy from team/index.html)
-
 ##### kontakt/index.html
 
 - All Site (copy from impressum/index.html)
