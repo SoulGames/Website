@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>SoulGames | News</title>
+	<title>SoulGames | Wartung</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
@@ -45,57 +45,49 @@
 		console.log(theme + " theme enabled!");
 	</script>
 	
-	<!-- Maintenance Check -->
-	<script>
-		maintenance = true
-	
-		if (maintenance == true) {
-			window.location.href = "../maintenance";
-		}
-	</script>
 </head>
 <body>
 
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
 	
+	<!-- Navbar -->
 	<div class="topnav" id="myTopnav">
 		<div class="max-width">
-			  <a href="../team" class="left">Team</a>
-			  <a href="https://forum.SoulGames.de" class="left">Forum</a>
-			  <a href="../news" class="left">News</a>
 			  <a href="https://invite.teamspeak.com/SoulGames" class="fab fa-teamspeak right" ></a>
 			  <a href="https://discord.gg/E6xHYky" class="fab fa-discord right" ></a>
 		  	  <a href="https://twitter.com/soulgames_rpg" class="fab fa-twitter right""></a>
 			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 		</div>
 	</div>
-	
+
 	<header id="head" class="parallax">
-		<h1>SoulGames</h1>
+		<h1 href="..">SoulGames</h1>
 		<h3>Dein RPG Netzwerk</h3>
 	</header>
-	
-	<section id="gamemodes">
-		<h1>News</h1>
-		<p>Neuste Informationen über unser Netzwerk!</p>
-		<hr><br>
 
+	<section id="gamemodes">
+		<h1 id="message">Wartungsarbeiten</h1>
+		<hr><br>
+	
 		<div class="row fixed-width">
 			<div class="col-md ">
-				<a class="twitter-timeline" data-width="700" data-height="2000" data-theme="dark" href="https://twitter.com/NoNamePro0/lists/soulgames?ref_src=twsrc%5Etfw">Twitterfeed</a>
-				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<p>
+					<div class="alert alert-warning" role="alert">
+						Wir sind aktuell in Wartungsarbeiten!
+					</div>
+				</p>
 			</div>
 		</div>
 	</section>
 
 	<section id="banner2" class="parallax">
 	</section>
-	
+
 	<footer>
 		<div class="footer">
 			<div class="copyright-notice">
 				<p>&copy; SoulGames</p>
-				<p>All rights reserved</p>
+				<a href="../kontakt">Kontakt</a> | <a href="../impressum">Impressum</a>
 			</div>
 		</div>
 	</footer>
