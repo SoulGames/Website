@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SoulGames | Impressum</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="author" content="No Name Pro">
+	<meta name="theme-color" content="#FFA500">
+	<link rel="shortcut icon" type="image/png" href="../src/img/logo.png"/>
+
+	<!-- Custom CSS for this template -->
+	<link rel="stylesheet" type="text/css" href="../src/css/main.css">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="../src/css/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap/bootstrap.min.js">
+
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/eb905d3d74.js" crossorigin="anonymous"></script>
+	
+	<!-- Get Theme from URL Parameter and enable theme -->
+	<script>
+		var head = document.getElementsByTagName('HEAD')[0];
+		
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		
+		const theme = urlParams.get('theme')
+		
+		var link = document.createElement('link');
+		link.rel = stylesheet';
+		link.type = 'text/css';
+		
+		link.href = 'src/css/themes/' + theme + '.css';  
+		
+		head.appendChild(link);
+
+		console.log(theme + " theme enabled!");
+	</script>
+</head>
+<body>
+
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
+	
+	<!-- Navbar -->
+	<div class="topnav" id="myTopnav">
+		<div class="max-width">
+			  <a href="../team" class="left">Team</a>
+			  <a href="https://forum.SoulGames.de" class="left">Forum</a>
+			  <a href="../news" class="left">News</a>
+			  <a href="https://invite.teamspeak.com/SoulGames" class="fab fa-teamspeak right" ></a>
+			  <a href="https://discord.gg/E6xHYky" class="fab fa-discord right" ></a>
+		  	  <a href="https://twitter.com/soulgames_rpg" class="fab fa-twitter right""></a>
+			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+	</div>
+
+	<header id="head" class="parallax">
+		<h1 href="..">SoulGames</h1>
+		<h3>Dein RPG Netzwerk</h3>
+	</header>
+
+	<section id="gamemodes">
+		<h1 id="impressum">Impressum</h1>
+		<hr><br>
+	
+		<div class="row fixed-width">
+			<div class="col-md ">
+				<p>
+					<b><u>Angaben gem. § 5 TMG:</u></b><br>
+					<br><b>Vorname, Name</b>: Herzog, Luca
+					<br><b>Adresse</b>: Stadionstraße 52
+					<br><b>Stadt</b>: Leinfelden-Echterdingen
+					<br><b>PLZ</b>: 70771
+					<br><b>Land</b>: Deutschland
+					<br><b>E-Mail Adresse</b>: <a href='mailto:help@soulgames.de'>help@soulgames.de</a>
+					
+					<br><br><b><u>Haftung für Inahlte</u></b><br>
+					<br>Alle Inhalte unseres Internetauftritts wurden mit größter Sorgfalt und nach bestem Gewissen erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+					<br>Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntniserlangung einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von den o.g. Rechtsverletzungen werden wir diese Inhalte unverzüglich entfernen.
+					
+					<br><br><br><b><i>Für weitere Informationen, wenden sie sich an die E-Mail Adresse <a href="mailto:help@soulgames.de">help@soulgames.de</a>!</i></b><br><br><br>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="banner2" class="parallax">
+	</section>
+
+	<footer>
+		<div class="footer">
+			<div class="copyright-notice">
+				<p>&copy; SoulGames</p>
+				<a href="../kontakt">Kontakt</a> | <a href="#impressum">Impressum</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Smooth Scrolling Script (from https://goo.gl/uWLqWu) | Do not touch if you don't know what you're doing! -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 100, function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+	</script>
+	<!-- End Smooth Scrolling Script -->
+
+	<script>
+		function myFunction() {
+		    var x = document.getElementById("myTopnav");
+		    if (x.className === "topnav") {
+		        x.className += " responsive";
+		    } else {
+		        x.className = "topnav";
+		    }
+		}
+	</script>
+
+	<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	        document.getElementById("myBtn").style.display = "block";
+	    } else {
+	        document.getElementById("myBtn").style.display = "none";
+	    }
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	    document.body.scrollTop = 0;
+	    document.documentElement.scrollTop = 0;
+	}
+	</script>
+
+</body>
+</html>
