@@ -1,11 +1,5 @@
-
-
 @-ms-viewport{
     width:device-width
-}
-html{
-    box-sizing:border-box;
-    -ms-overflow-style:scrollbar
 }
 *,::after,::before{
     box-sizing:inherit
@@ -17,10 +11,15 @@ html{
 }
 
 html,body {
+	box-sizing:border-box;
+    -ms-overflow-style:scrollbar;
 	font-family: 'PT Sans', sans-serif;
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 
 hr {
@@ -159,20 +158,20 @@ a:hover {
 	color: orange;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	text-shadow: 1px 1px 5px #000;
+	max-width: 100%; 
+    height: auto; 
 }
 
 #head h1 {
 	font-size: 55px;
 	font-weight: 700;
 	text-transform: uppercase;
-	transform: scale(1.1,1.1);
 	transition: all .2s ease-in;
 }
 
 #head h3 {
 	font-size: 22px;
 	text-transform: uppercase;
-	transform: scale(1.1,1.1);
 	transition: all .2s ease-in;
 }
 
@@ -225,8 +224,10 @@ a:hover {
 	padding: 75px 0px 75px 0px;
 	text-align: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	transform: scale(1.1,1.1);
 	transition: all .2s ease-in;
+	max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 
 #banner2 {
@@ -234,8 +235,10 @@ a:hover {
 	padding: 75px 0px 75px 0px;
 	text-align: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	transform: scale(1.1,1.1);
 	transition: all .2s ease-in;
+	max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 
 #banner3 {
@@ -243,8 +246,10 @@ a:hover {
 	padding: 75px 0px 75px 0px;
 	text-align: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	transform: scale(1.1,1.1);
 	transition: all .2s ease-in;
+	max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 
 #banner h1 {
