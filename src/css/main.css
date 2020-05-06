@@ -11,6 +11,11 @@ html{
     box-sizing:inherit
 }
 
+::selection {
+    background-color: #FFA500;
+    color: white;
+}
+
 html,body {
 	font-family: 'PT Sans', sans-serif;
 	margin: 0;
