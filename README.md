@@ -1,7 +1,8 @@
-# SoulGames
+## SoulGames
 
 The official Website for SoulGames.de
 
 ## To-Do
 
-- To add, please add an issue
+- [x] Maintenance deactivated
+- [x] Replaced the placeholder
