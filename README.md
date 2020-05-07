@@ -7,5 +7,3 @@ The official Website for SoulGames.de
 - [x] Maintenance deactivated
 - [x] Replaced the placeholder
 - [x] Added SEO
-
-[Bugs](https://github.com/SoulGames/Website/blob/master/BUGS.md)
