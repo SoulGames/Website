@@ -33,7 +33,7 @@
 
 	<!-- Font Awesome -->
 	<script src="https://kit.fontawesome.com/eb905d3d74.js" crossorigin="anonymous"></script>
-	
+
 	<!-- Get Theme from URL Parameter and enable theme -->
 	<script>
 		var head = document.getElementsByTagName('HEAD')[0];
@@ -53,6 +53,16 @@
 
 		console.log(theme + " theme enabled!");
 	</script>
+
+	<!-- Maintenance Check -->
+	<script>
+		maintenance = false
+		
+		if (maintenance == false) {
+			window.location.href = "../";
+		}
+	</script>
+
 	<script>
 		var countDownDate = new Date("Apr 26, 2020 10:00:00").getTime();
 		
