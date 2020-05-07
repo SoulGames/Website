@@ -25,3 +25,7 @@ a,p {
 #banner3 {
 	background-image: url("https://media.discordapp.net/attachments/692375435295850537/702190945432633385/2020-04-21_18.10.14.png");
 }
+::selection {
+    background-color: #383838;
+    color: white;
+}
