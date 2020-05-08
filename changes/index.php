@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>SoulGames | Impressum</title>
+	<title>SoulGames | Change Log</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
@@ -64,7 +64,7 @@
 			  <a href="../team" class="left">Team</a>
 			  <a href="https://forum.SoulGames.de" class="left">Forum</a>
 			  <a href="../news" class="left">News</a>
-			  <a href="../changes/" class="left">Change Log</a>
+			  <a href="" class="left">Change Log</a>
 			  <a href="https://invite.teamspeak.com/SoulGames" class="fab fa-teamspeak right" target="_blank"></a>
 			  <a href="https://discord.gg/E6xHYky" class="fab fa-discord right" target="_blank"></a>
 			  <a href="https://instagram.com/SoulGames_RPG" class="fab fa-instagram right" target="_blank"></a>
@@ -79,26 +79,31 @@
 	</header>
 
 	<section id="gamemodes">
-		<h1 id="impressum">Impressum</h1>
+		<h1 id="impressum">Change Log</h1>
 		<hr><br>
 	
 		<div class="row fixed-width">
 			<div class="col-md ">
-				<p>
-					<b><u>Angaben gem. § 5 TMG:</u></b><br>
-					<br><b>Name, Vorname</b>: Herzog, Luca
-					<br><b>Adresse</b>: Stadionstraße 52
-					<br><b>Stadt</b>: Leinfelden-Echterdingen
-					<br><b>PLZ</b>: 70771
-					<br><b>Land</b>: Deutschland
-					<br><b>E-Mail Adresse</b>: <a href='mailto:help@soulgames.de'>help@soulgames.de</a>
-					
-					<br><br><b><u>Haftung für Inahlte</u></b><br>
-					<br>Alle Inhalte unseres Internetauftritts wurden mit größter Sorgfalt und nach bestem Gewissen erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
-					<br>Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntniserlangung einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von den o.g. Rechtsverletzungen werden wir diese Inhalte unverzüglich entfernen.
-					
-					<br><br><br><b><i>Für weitere Informationen, wenden sie sich an die E-Mail Adresse <a href="mailto:help@soulgames.de">help@soulgames.de</a>!</i></b><br><br><br>
-				</p>
+            <?php 
+                require("../admin/mysql.php");
+
+                $stmt = $mysql->prepare("SELECT * FROM changelog LIMIT 10");
+                $stmt->execute();
+
+                $counter = $stmt->rowCount();
+                if($counter == 0) {
+                    echo "Es wurden keine Änderungen gefunden.";
+                } else {
+                    while($row = $stmt->fetch()) {
+                    ?>
+                    <h1><?php echo $row["TITLE"] ?></h1>
+                    <p><?php echo $row["CHANGENEWS"] ?></p>
+                    <p><?php echo date("d.m.Y", $row["CREATED_AT"]) ?></p>
+                    <?php
+                }
+            }
+
+            ?>
 			</div>
 		</div>
 	</section>
@@ -110,7 +115,7 @@
 		<div class="footer">
 			<div class="copyright-notice">
 				<p>&copy; SoulGames</p>
-				<a href="../kontakt">Kontakt</a> | <a href="#impressum">Impressum</a>
+				<a href="../kontakt">Kontakt</a> | <a href="../impressum">Impressum</a>
 			</div>
 		</div>
 	</footer>
