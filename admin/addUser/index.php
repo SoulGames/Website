@@ -3,15 +3,15 @@
   <head>
 
     <!-- Bootstrap -->
-	  <link rel="stylesheet" type="text/css" href="../src/css/bootstrap/bootstrap.css">
-	  <link rel="stylesheet" type="text/css" href="../js/bootstrap/bootstrap.min.js">
+	  <link rel="stylesheet" type="text/css" href="../../src/css/bootstrap/bootstrap.css">
+	  <link rel="stylesheet" type="text/css" href="../../js/bootstrap/bootstrap.min.js">
     <meta charset="utf-8">
     <title>SoulGames | Adminboard</title>
   </head>
   <body>
     <?php
     if(isset($_POST["submit"])){
-      require("mysql.php");
+      require("../mysql.php");
       $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user"); //Username überprüfen
       $stmt->bindParam(":user", $_POST["username"]);
       $stmt->execute();

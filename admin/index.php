@@ -20,7 +20,7 @@
         if(password_verify($_POST["pw"], $row["PASSWORD"])){
           session_start();
           $_SESSION["username"] = $row["USERNAME"];
-          header("Location: addchange.php");
+          header("Location: addChange/addChange.php");
         } else {
           echo "Der Login ist fehlgeschlagen";
         }
