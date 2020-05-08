@@ -96,8 +96,8 @@
                 } else {
                     while($row = $stmt->fetch()) {
                     ?>
-                    <h1><?php echo $row["TITLE"] ?></h1>
-                    <p><?php echo $row["CHANGENEWS"] ?></p>
+                    <h1><?php echo htmlentities($row["TITLE"]) ?></h1>
+                    <p><?php echo htmlentities($row["CHANGENEWS"]) ?></p>
                     <p><?php echo date("d.m.Y", $row["CREATED_AT"]) ?></p>
                     <?php
                 }
