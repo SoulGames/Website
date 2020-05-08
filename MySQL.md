@@ -16,10 +16,6 @@ CREATE TABLE accounts(
 );
 ```
 
-```sql
-INSERT INTO accounts (USERNAME, PASSWORD) VALUES ("username", "password");
-```
-
 ### Go in the `mysql.php` and change the values
 # After account creation delete adduser.php or add befor the HTML DOCTYPE:
 ```php
