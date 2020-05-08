@@ -41,7 +41,7 @@
     }
      ?>
     <h1>Account erstellen</h1>
-    <form action="register.php" method="post">
+    <form action="index.php" method="post">
       <input type="text" name="username" placeholder="Username" required><br>
       <input type="password" name="pw" placeholder="Passwort" required><br>
       <input type="password" name="pw2" placeholder="Passwort wiederholen" required><br>
