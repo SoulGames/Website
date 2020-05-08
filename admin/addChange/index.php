@@ -18,7 +18,7 @@ if(!isset($_SESSION["username"])){
 
     <?php 
     if(isset($_POST["submit"])){
-        require("mysql.php");
+        require("../mysql.php");
         $stmt = $mysql->prepare("INSERT INTO changelog (TITLE, CHANGENEWS, CREATED_AT) VALUES (:title, :change, :now)");
         $stmt->bindParam(":title", $_POST[title], PDO::PARAM_STR);
         $stmt->bindParam(":change", $_POST[change], PDO::PARAM_STR);
@@ -33,7 +33,7 @@ if(!isset($_SESSION["username"])){
     ?>
     <div class="container mx-auto">
     <center><h1>Erstelle einen Changelog</h1></center>
-    <form action="addchange.php" method="post">
+    <form action="index.php" method="post">
         <input class="form-control" type="text" name="title" placeholder="Title" required><br>
         <textarea class="form-control" name="change" cols="30" rows="10" required></textarea><br>
         <button class="btn btn-primary btn-lg btn-block" type="submit" name="submit">Veröffentlichen</button>
