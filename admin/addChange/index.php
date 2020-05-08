@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION["username"])){
-  header("Location: index.php");
+  header("Location: ../index.php");
   exit;
 }
 ?>
@@ -11,8 +11,8 @@ if(!isset($_SESSION["username"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoulGames | Adminboard</title>
-    <link rel="stylesheet" type="text/css" href="../src/css/bootstrap/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../src/js/bootstrap/bootstrap.min.js">
+    <link rel="stylesheet" type="text/css" href="../../src/css/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../../src/js/bootstrap/bootstrap.min.js">
 </head>
 <body>
 
@@ -39,7 +39,7 @@ if(!isset($_SESSION["username"])){
         <button class="btn btn-primary btn-lg btn-block" type="submit" name="submit">Veröffentlichen</button>
     </form>
     <br>
-    <a href="logout.php"><button class="btn btn-danger btn-lg btn-block" type="button" name="submit">Logout</button></a>
+    <a href="../logout.php"><button class="btn btn-danger btn-lg btn-block" type="button" name="submit">Logout</button></a>
     </div>
 </body>
 </html>

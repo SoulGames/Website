@@ -17,11 +17,11 @@ CREATE TABLE accounts(
 ```
 
 ### Go in the `mysql.php` and change the values
-# After account creation delete adduser.php or add befor the HTML DOCTYPE:
+# After account creation delete admin/addUser/index.php or add befor the HTML DOCTYPE:
 ```php
 <?php
 session_start();
 session_destroy();
-header("Location: index.php");
+header("Location: ../index.php");
 ?>
 ```
