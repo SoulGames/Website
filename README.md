@@ -7,3 +7,5 @@ The official Website for SoulGames.de
 - [x] Maintenance deactivated
 - [x] Replaced the placeholder
 - [x] Added SEO
+
+Look in the `MySQL.md`
