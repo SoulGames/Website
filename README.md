@@ -1,4 +1,4 @@
-<center><h1>SoulGames / Website</h1>
+# [SoulGames](https://github.com/SoulGames) / [Website](https://github.com/SoulGames/Website)
 
 [![Discord](https://img.shields.io/discord/612932518819135498?label=Discord&style=for-the-badge)](https://discord.SoulGames.de/)
 [![Twitter](https://img.shields.io/twitter/follow/SoulGames?color=%23&label=Twitter&style=for-the-badge)](https://twitter.com/SoulGames_RPG)
