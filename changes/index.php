@@ -14,7 +14,7 @@
 	<meta name="keywords" content="Soulgames, Soulgames.de, RPG, Sevrver, Soulgames RPG, Minecraft RPG, Minecraft RPG Server, SoulGames Netzwerk">
 	<meta name="robots" content="index, follow">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="language" content="English">
+	<meta name="language" content="German">
 	<meta name="revisit-after" content="1 days">
 	<meta name="author" content="NoNamePro &amp; StackNeverFlow">
 
@@ -90,8 +90,8 @@
                 $stmt = $mysql->prepare("SELECT * FROM changelog LIMIT 10");
                 $stmt->execute();
 
-                $counter = $stmt->rowCount();
-                if($counter == 0) {
+                $changes = $stmt->rowCount();
+                if($changes == 0) {
                     echo "Es wurden keine Änderungen gefunden.";
                 } else {
                     while($row = $stmt->fetch()) {
