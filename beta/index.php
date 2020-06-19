@@ -53,29 +53,11 @@
 
 		console.log(theme + " theme enabled!");
 	</script>
+
+	<!-- Maintenance Check -->
+	<script src="../src/js/maintenance.js"></script>
 </head>
 <body>
-
-	<?php
-      if(isset($_POST["submit"])){
-        require("mysql.php");
-        $stmt = $mysql->prepare("SELECT * FROM beta WHERE BETAPW = :betapw");
-        $stmt->bindParam(":betapw", $_POST["betapw"]);
-        $stmt->execute();
-        $count = $stmt->rowCount();
-        if($count == 1){
-          $row = $stmt->fetch();
-          if($_POST["betapw"] == $row["BETAPW")){
-            // Code here
-          } else {
-            echo `<div class="alert alert-danger"><strong>Danger!</strong>Der Login ist fehlgeschlagen.</div>`;
-          }
-        } else {
-          echo `<div class="alert alert-danger"><strong>Danger!</strong>Der Login ist fehlgeschlagen.</div>`;
-        }
-      }
-    ?>
-
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
 	
 	<!-- Navbar -->
@@ -103,6 +85,27 @@
 		<h1 id="beta">Beta Access</h1>
 		<hr><br>
 		  
+		
+	<?php
+      if(isset($_POST["submit"])){
+        require("mysql.php");
+        $stmt = $mysql->prepare("SELECT * FROM beta WHERE BETAPW = :betapw");
+        $stmt->bindParam(":betapw", $_POST["betapw"]);
+        $stmt->execute();
+        $count = $stmt->rowCount();
+        if($count == 1){
+          $row = $stmt->fetch();
+          if($_POST["betapw"] == $row["BETAPW")){
+            // Code here
+          } else {
+            echo `<div class="alert alert-danger"><strong>Betakey</strong>Der Betakey ist falsch.</div>`;
+          }
+        } else {
+			echo `<div class="alert alert-danger"><strong>Betakey</strong>Der Betakey ist falsch.</div>`;
+        }
+      }
+    ?>
+
 		<form action="index.php" method="post">
 		<div class="row fixed-width">
 			<div class="col-md ">
