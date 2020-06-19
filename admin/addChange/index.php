@@ -36,6 +36,21 @@ if(!isset($_SESSION["username"])){
     <form action="index.php" method="post">
         <input class="form-control" type="text" name="title" placeholder="Title" required><br>
         <textarea class="form-control" name="change" cols="30" rows="10" required></textarea><br>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Thema</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01" required>
+            <option selected>Choose...</option>
+            <option value="1">Webseite</option>
+            <option value="2">Discord</option>
+            <option value="3">Discord</option>
+            <option value="4">Minecraft Allgemein</option>
+            <option value="5">Freebuild</option>
+        </select>
+        </div>  <br>
+
         <button class="btn btn-primary btn-lg btn-block" type="submit" name="submit">Veröffentlichen</button>
     </form>
     <br>
