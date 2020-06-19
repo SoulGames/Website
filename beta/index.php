@@ -96,7 +96,11 @@
         if($count == 1){
           $row = $stmt->fetch();
           if($_POST["betapw"] == $row["BETAPW")){
-            // Code here
+			require("../admin/mysql.php");
+			
+        	$stmt = $mysql->prepare("INSERT INTO beta (USERNAME, isBETA) VALUES (:username, :isB)");
+        	$stmt->bindParam(":username", $_POST[username], PDO::PARAM_STR);
+        	$stmt->bindParam(":isB", true, PDO::PARAM_BOOL);
           } else {
             echo `<div class="alert alert-danger"><strong>Betakey</strong>Der Betakey ist falsch.</div>`;
           }
