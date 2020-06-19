@@ -9,8 +9,8 @@
   	<description>Change Log</description>
 	<category>Minecraft</category>
 	<language>de-de</language>
-        <?php 
-        	require("../admin/mysql.php");
+    <?php 
+     	require("../admin/mysql.php");
 		
 		$stmt = $mysql->prepare("SELECT * FROM changelog");
 		$stmt->execute();
