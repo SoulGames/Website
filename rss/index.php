@@ -25,6 +25,7 @@
 						<title><?php echo htmlentities($row["TITLE"]) ?></title>
 						<description><?php echo htmlentities($row["CHANGENEWS"]) ?></description>
 						<author>Dein SoulGames Team</author>
+						<category><?php echo htmlentities($row["CAT"]) ?></category>
 					</item>
 				<?php
 			}
