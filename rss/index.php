@@ -9,29 +9,26 @@
   	<description>Change Log</description>
 	<category>Minecraft</category>
 	<language>de-de</language>
-            <?php 
-                require("../admin/mysql.php");
+        <?php 
+        	require("../admin/mysql.php");
+		
+		$stmt = $mysql->prepare("SELECT * FROM changelog");
+		$stmt->execute();
 
-                $stmt = $mysql->prepare("SELECT * FROM changelog");
-                $stmt->execute();
-
-                $counter = $stmt->rowCount();
-                if($counter == 0) {
-                    echo "";
-                } else {
-                    while($row = $stmt->fetch()) {
-                    ?>
-
-	<item>
-		<title><?php echo htmlentities($row["TITLE"]) ?></title>
-		<description><?php echo htmlentities($row["CHANGENEWS"]) ?></description>
-		<author>Dein SoulGames Team</author>
-	</item>
-                    <?php
-                }
-            }
-
-            ?>
-
+		$counter = $stmt->rowCount();
+		if($counter == 0) {
+			echo "";
+		} else {
+			while($row = $stmt->fetch()) {
+				?>
+					<item>
+						<title><?php echo htmlentities($row["TITLE"]) ?></title>
+						<description><?php echo htmlentities($row["CHANGENEWS"]) ?></description>
+						<author>Dein SoulGames Team</author>
+					</item>
+				<?php
+			}
+		}
+	?>
 </channel>
 </rss>
