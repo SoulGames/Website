@@ -56,6 +56,26 @@
 </head>
 <body>
 
+	<?php
+      if(isset($_POST["submit"])){
+        require("mysql.php");
+        $stmt = $mysql->prepare("SELECT * FROM beta WHERE BETAPW = :betapw");
+        $stmt->bindParam(":betapw", $_POST["betapw"]);
+        $stmt->execute();
+        $count = $stmt->rowCount();
+        if($count == 1){
+          $row = $stmt->fetch();
+          if($_POST["betapw"] == $row["BETAPW")){
+            // Code here
+          } else {
+            echo `<div class="alert alert-danger"><strong>Danger!</strong>Der Login ist fehlgeschlagen.</div>`;
+          }
+        } else {
+          echo `<div class="alert alert-danger"><strong>Danger!</strong>Der Login ist fehlgeschlagen.</div>`;
+        }
+      }
+    ?>
+
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
 	
 	<!-- Navbar -->
@@ -82,24 +102,29 @@
 	<section id="gamemodes">
 		<h1 id="beta">Beta Access</h1>
 		<hr><br>
-	
+		  
+		<form action="index.php" method="post">
 		<div class="row fixed-width">
 			<div class="col-md ">
 				<div class="input-group mb-3">
 					<div class="input-group-prepend">
 					  <span class="input-group-text" id="basic-addon1">Username</span>
 					</div>
-					<input type="text" class="form-control" placeholder="Dein Minecraft Name" aria-label="Username" aria-describedby="basic-addon1">
+					<input name="username" type="text" class="form-control" placeholder="Dein Minecraft Name" aria-label="Username" aria-describedby="basic-addon1">
 				  </div>
 
 				  <div class="input-group mb-3">
 					<div class="input-group-prepend">
 					  <span class="input-group-text" id="basic-addon1">Betakey</span>
 					</div>
-					<input type="text" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX" aria-label="Betakey" aria-describedby="basic-addon1">
+					<input name="betapw" type="text" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX" aria-label="Betakey" aria-describedby="basic-addon1">
 				  </div>
 			</div>
 		</div>
+
+		<button type="submit" class="btn btn-primary">Betakey einlösen</button>
+		</form>
+
 	</section>
 
 	<section id="banner2" class="parallax">
