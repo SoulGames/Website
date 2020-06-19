@@ -88,7 +88,7 @@
             <?php 
                 require("../admin/mysql.php");
 
-                $stmt = $mysql->prepare("SELECT * FROM changelog LIMIT 10");
+                $stmt = $mysql->prepare("SELECT * FROM `changelog` ORDER BY `changelog`.`CREATED_AT` DESC");
                 $stmt->execute();
 
                 $changes = $stmt->rowCount();
@@ -96,10 +96,12 @@
                     echo "Es wurden keine Änderungen gefunden.";
                 } else {
                     while($row = $stmt->fetch()) {
-                    ?>
-                    <h1><?php echo $row["TITLE"] ?></h1>
-                    <p><?php echo $row["CHANGENEWS"] ?></p>
-                    <p><?php echo date("d.m.Y", $row["CREATED_AT"]) ?></p>
+					?>
+                    <h1><?php echo htmlentities($row["TITLE"]) ?></h1>
+                    <p><?php echo htmlentities($row["CHANGENEWS"]) ?></p>
+					<p><?php echo date("d.m.Y", $row["CREATED_AT"]) ?></p>
+					<p>Kategorie: <?php echo htmlentities($row["CAT"]) ?></p>
+					<hr>
                     <?php
                 }
             }

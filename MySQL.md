@@ -1,11 +1,27 @@
 ### Create the changelog table
 
 ```sql
-CREATE TABLE changelog(
+CREATE TABLE `changelog` (
+  `ID` int(11) NOT NULL UNIQUE AUTO_INCREMENT,
+  `TITLE` varchar(255) DEFAULT NULL,
+  `CHANGENEWS` varchar(5000) DEFAULT NULL,
+  `CREATED_AT` varchar(255) DEFAULT NULL,
+  `CAT` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+```
+
+```sql
+CREATE TABLE betakeys(
     ID INT(11) AUTO_INCREMENT UNIQUE,
-    TITLE VARCHAR(255),
-    CHANGENEWS VARCHAR(2550),
-    CREATED_AT VARCHAR(255)
+    BETAPW VARCHAR(255) UNIQUE
+);
+```
+
+```sql
+CREATE TABLE betausers(
+    ID INT(11) AUTO_INCREMENT UNIQUE,
+    BETAPW VARCHAR(255) UNIQUE,
+    isB TINYINT(1)
 );
 ```
 

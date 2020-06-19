@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>SoulGames | Impressum</title>
+	<title>SoulGames | Beta Zugriff</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
@@ -89,27 +89,33 @@
 	<?php
       if(isset($_POST["submit"])){
         require("mysql.php");
-        $stmt = $mysql->prepare("SELECT * FROM beta WHERE BETAPW = :betapw");
-        $stmt->bindParam(":betapw", $_POST["betapw"]);
+		$stmt = $mysql->prepare("SELECT * FROM betakeys WHERE BETAPW = :betapwk");
+        $stmt->bindParam(":betapwk", $_POST[betapw]);
         $stmt->execute();
         $count = $stmt->rowCount();
         if($count == 1){
           $row = $stmt->fetch();
-          if($_POST["betapw"] == $row["BETAPW")){
-			require("../admin/mysql.php");
+		  if($_POST["betapw"] == $row["BETAPW"]){
+			require("mysql.php");
+
+			$stmtd = $mysql->prepare("DELETE FROM betakeys WHERE BETAPW = :betapwk;");
+			$stmtd->bindParam(":betapwk", $_POST["betapw"]);
+			$stmtd->execute();
 			
-        	$stmt = $mysql->prepare("INSERT INTO beta (USERNAME, isBETA) VALUES (:username, :isB)");
-        	$stmt->bindParam(":username", $_POST[username], PDO::PARAM_STR);
-        	$stmt->bindParam(":isB", true, PDO::PARAM_BOOL);
+        	$stmti = $mysql->prepare('INSERT INTO betausers (BETAPW, isB) VALUES (:username, "1")');
+			$stmti->bindParam(":username", $_POST[username], PDO::PARAM_STR);
+			$stmti->execute();
+
+			echo "Der Betakey wurde erfolgreich eingelöst. <br>";
           } else {
-            echo `<div class="alert alert-danger"><strong>Betakey</strong>Der Betakey ist falsch.</div>`;
+            echo "Der Betakey ist falsch. <br>";
           }
         } else {
-			echo `<div class="alert alert-danger"><strong>Betakey</strong>Der Betakey ist falsch.</div>`;
+			echo "Der Betakey ist falsch. <br>";
         }
       }
     ?>
-
+		<br>
 		<form action="index.php" method="post">
 		<div class="row fixed-width">
 			<div class="col-md ">
@@ -117,19 +123,19 @@
 					<div class="input-group-prepend">
 					  <span class="input-group-text" id="basic-addon1">Username</span>
 					</div>
-					<input name="username" type="text" class="form-control" placeholder="Dein Minecraft Name" aria-label="Username" aria-describedby="basic-addon1">
+					<input name="username" type="text" class="form-control" placeholder="Dein Minecraft Name" aria-label="Username" aria-describedby="basic-addon1" required>
 				  </div>
 
 				  <div class="input-group mb-3">
 					<div class="input-group-prepend">
 					  <span class="input-group-text" id="basic-addon1">Betakey</span>
 					</div>
-					<input name="betapw" type="text" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX" aria-label="Betakey" aria-describedby="basic-addon1">
+					<input name="betapw" type="text" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX" aria-label="Betakey" aria-describedby="basic-addon1" required>
 				  </div>
 			</div>
 		</div>
 
-		<button type="submit" class="btn btn-primary">Betakey einlösen</button>
+		<button type="submit" class="btn btn-primary" name="submit">Betakey einlösen</button>
 		</form>
 
 	</section>

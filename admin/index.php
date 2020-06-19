@@ -8,7 +8,12 @@
   </head>
   <body>
     <div class="container mx-auto">
-    <center><h1>Anmelden</h1></center>
+
+    <center>
+      <img src="../src/img/logo.png" alt="SoulGames.de RPG">
+      <h1>Anmelden</h1>
+    </center>
+
       <?php
       if(isset($_POST["submit"])){
         require("mysql.php");
@@ -23,10 +28,10 @@
             $_SESSION["username"] = $row["USERNAME"];
             header("Location: addChange/index.php");
           } else {
-            echo `<div class="alert alert-danger"><strong>Danger!</strong>Der Login ist fehlgeschlagen.</div>`;
+            echo `Der Login ist fehlgeschlagen.`;
           }
         } else {
-          echo `<div class="alert alert-danger"><strong>Danger!</strong>Der Login ist fehlgeschlagen.</div>`;
+          echo `Der Login ist fehlgeschlagen.`;
         }
       }
       ?>
