@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>SoulGames | Team</title>
+	<title>SoulGames | Impressum</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
@@ -9,7 +9,7 @@
 	<link rel="shortcut icon" type="image/png" href="../src/img/logo.png"/>
 
 	<!-- SEO -->
-	<meta name="title" content="SoulGames.DE | Team">
+	<meta name="title" content="SoulGames.DE | Impressum">
 	<meta name="description" content="Dies ist die offiziele Webseite von dem SoulGames.DE Server Netwerk.">
 	<meta name="keywords" content="Soulgames, Soulgames.de, RPG, Sevrver, Soulgames RPG, Minecraft RPG, Minecraft RPG Server, SoulGames Netzwerk">
 	<meta name="robots" content="index, follow">
@@ -29,7 +29,7 @@
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="../src/css/bootstrap/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="js/bootstrap/bootstrap.min.js">
+	<link rel="stylesheet" type="text/css" href="../js/bootstrap/bootstrap.min.js">
 
 	<!-- Font Awesome -->
 	<script src="https://kit.fontawesome.com/eb905d3d74.js" crossorigin="anonymous"></script>
@@ -44,7 +44,7 @@
 		const theme = urlParams.get('theme')
 		
 		var link = document.createElement('link');
-		link.rel = 'stylesheet';
+		link.rel = stylesheet;
 		link.type = 'text/css';
 		
 		link.href = 'src/css/themes/' + theme + '.css';  
@@ -53,128 +53,51 @@
 
 		console.log(theme + " theme enabled!");
 	</script>
-	
-	<!-- Maintenance Check -->
-	<script src="../src/js/maintenance.js"></script>
 </head>
 <body>
 
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
 	
+	<!-- Navbar -->
 	<div class="topnav" id="myTopnav">
 		<div class="max-width">
 			  <a href="../team" class="left">Team</a>
 			  <a href="https://forum.SoulGames.de" class="left">Forum</a>
 			  <a href="../news" class="left">News</a>
 			  <a href="../changes/" class="left">Change Log</a>
-			  <a href="../beta/" class="left">Beta Access</a>
-			  <a href="https://invite.teamspeak.com/SoulGames" class="fab fa-teamspeak right" ></a>
-			  <a href="https://discord.gg/E6xHYky" class="fab fa-discord right" ></a>
-			  <a href="https://instagram.com/SoulGames_RPG" class="fab fa-instagram right" ></a>
-		  	  <a href="https://twitter.com/soulgames_rpg" class="fab fa-twitter right"></a>
+			  <a href="#" class="left">Beta Access</a>
+			  <a href="https://invite.teamspeak.com/SoulGames" class="fab fa-teamspeak right" target="_blank"></a>
+			  <a href="https://discord.gg/E6xHYky" class="fab fa-discord right" target="_blank"></a>
+			  <a href="https://instagram.com/SoulGames_RPG" class="fab fa-instagram right" target="_blank"></a>
+		  	  <a href="https://twitter.com/soulgames_rpg" class="fab fa-twitter right" target="_blank"></a>
 			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 		</div>
 	</div>
-	
+
 	<header id="head" class="parallax">
 		<h1 href="..">SoulGames</h1>
 		<h3>Dein RPG Netzwerk</h3>
 	</header>
+
+	<section id="gamemodes">
+		<h1 id="beta">Beta Access</h1>
+		<hr><br>
 	
-	<section id="staff">
-		<h1>Unser Team</h1>
-		<p>Die Teammitglieder von SoulGames</p>
-		<hr>
-		<div class="row stafflist">
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/RedImSky/100.png">
-				<h2>RedImSky</h2>
-				<span class="badge badge-danger">König</span>
-			</div>
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/Illegual/100.png">
-				<h2>Illegual</h2>
-				<span class="badge badge-danger">König</span>
-			</div>
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/NoNamePro0/100.png">
-				<h2>No Name Pro</h2>
-				<span class="badge badge-dark">Techniker</span>
-			</div>
-		</div>
-		<div class="row stafflist">
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/Skidder/100.png">
-				<h2>Skidder</h2>
-				<span class="badge badge-primary">Dev-Leitung</span>
-			</div>
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/Hax6775/100.png">
-				<h2>Hax</h2>
-				<span class="badge badge-primary">Developer</span>
-			</div>
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/GalaxyLPS/100.png">
-				<h2>GalaxyLPS</h2>
-				<span class="badge badge-primary">Developer</span>
-			</div>
-		</div>
-		<div class="row stafflist">
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/xVoiceSyntax/100.png">
-				<h2>xVoiceSyntax</h2>
-				<span class="badge badge-primary">Developer</span>
-			</div>
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/Eat_and_Speed/100.png">
-				<h2>Eat and Speed</h2>
-				<span class="badge badge-primary">Developer</span>
-			</div>
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/Takitodoari/100.png">
-				<h2>StackNeverFlow</h2>
-				<span class="badge badge-primary">Developer</span>
-			</div>
-		</div>
-		<div class="row stafflist">
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/mateedev/100.png">
-				<h2>mateedev</h2>
-				<span class="badge badge-success">Bauherr</span>
-			</div>
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/Thorbino/100.png">
-				<h2>Thorbino</h2>
-				<span class="badge badge-success">Bauherr</span>
-			</div>
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/Toximael/100.png">
-				<h2>Toxi</h2>
-				<span class="badge badge-info">Contentleitung</span>
-			</div>
-			</div>
-		<div class="row stafflist">
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/NurMaximillian/100.png">
-				<h2>NurMaximillian</h2>
-				<span class="badge badge-warning">Helfer+</span>
-			</div>
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/SneaX_Twitch/100.png">
-				<h2>SneaX_Flex</h2>
-				<span class="badge badge-warning">Helfer</span>
-			</div>
-			<div class="col-md staffblock">
-				<img width="100px;" src="https://minotar.net/helm/kampf_maschine02/100.png">
-				<h2>Bugraaa_</h2>
-				<span class="badge badge-warning">Helfer</span>
+		<div class="row fixed-width">
+			<div class="col-md ">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+					  <span class="input-group-text" id="basic-addon1">@</span>
+					</div>
+					<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+				  </div>
 			</div>
 		</div>
 	</section>
-	
-	<section id="banner" class="parallax">
+
+	<section id="banner2" class="parallax">
 	</section>
-	
+
 	<footer>
 		<div class="footer">
 			<div class="copyright-notice">
