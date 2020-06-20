@@ -2,8 +2,15 @@
 session_start();
 if(!isset($_SESSION["username"])){
     if(!isset($_SESSION["pw"])) {
-    header("Location: ../index.php");
-    exit;
+    require("../mysql.php");
+    $stmt = $mysql->prepare("SELECT * FROM accounts WHERE PASSWORD = :passw");
+    $stmt->bindParam(":passw", $_SESSION["pw"]);
+    $stmt->execute();
+    $row = $stmt->fetch();
+    if(!$_SESSION["pw"] == $row["PASSWORD"]) {
+        header("Location: ../index.php");
+        exit;
+    }
     }
 }
 ?>
