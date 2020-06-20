@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>SoulGames</title>
+	<title>SoulGames | Beta Zugriff</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<meta name="theme-color" content="#FFA500">
-	<link rel="shortcut icon" type="image/png" href="src/img/logo.png"/>
+	<link rel="shortcut icon" type="image/png" href="../src/img/logo.png"/>
 
 	<!-- SEO -->
-	<meta name="title" content="SoulGames.DE">
+	<meta name="title" content="SoulGames.DE | Impressum">
 	<meta name="description" content="Dies ist die offiziele Webseite von dem SoulGames.DE Server Netwerk.">
 	<meta name="keywords" content="Soulgames, Soulgames.de, RPG, Sevrver, Soulgames RPG, Minecraft RPG, Minecraft RPG Server, SoulGames Netzwerk">
 	<meta name="robots" content="index, follow">
@@ -19,7 +19,7 @@
 	<meta name="author" content="NoNamePro &amp; StackNeverFlow">
 
 	<!-- Custom CSS for this template -->
-	<link rel="stylesheet" type="text/css" href="src/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../src/css/main.css">
 
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -28,8 +28,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="src/css/bootstrap/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="js/bootstrap/bootstrap.min.js">
+	<link rel="stylesheet" type="text/css" href="../src/css/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../js/bootstrap/bootstrap.min.js">
 
 	<!-- Font Awesome -->
 	<script src="https://kit.fontawesome.com/eb905d3d74.js" crossorigin="anonymous"></script>
@@ -44,7 +44,7 @@
 		const theme = urlParams.get('theme')
 		
 		var link = document.createElement('link');
-		link.rel = 'stylesheet';
+		link.rel = stylesheet;
 		link.type = 'text/css';
 		
 		link.href = 'src/css/themes/' + theme + '.css';  
@@ -53,21 +53,21 @@
 
 		console.log(theme + " theme enabled!");
 	</script>
-	
+
 	<!-- Maintenance Check -->
 	<script src="../src/js/maintenance.js"></script>
 </head>
 <body>
-
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
 	
+	<!-- Navbar -->
 	<div class="topnav" id="myTopnav">
 		<div class="max-width">
-			  <a href="team" class="left">Team</a>
+			  <a href="../team" class="left">Team</a>
 			  <a href="https://forum.SoulGames.de" class="left">Forum</a>
-			  <a href="news" class="left">News</a>
-			  <a href="/changes/" class="left">Change Log</a>
-			  <a href="/beta/" class="left">Beta Access</a>
+			  <a href="../news" class="left">News</a>
+			  <a href="../changes/" class="left">Change Log</a>
+			  <a href="#" class="left">Beta Access</a>
 			  <a href="https://invite.teamspeak.com/SoulGames" class="fab fa-teamspeak right" target="_blank"></a>
 			  <a href="https://discord.gg/E6xHYky" class="fab fa-discord right" target="_blank"></a>
 			  <a href="https://instagram.com/SoulGames_RPG" class="fab fa-instagram right" target="_blank"></a>
@@ -75,120 +75,85 @@
 			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 		</div>
 	</div>
-	
+
 	<header id="head" class="parallax">
-		<h1>SoulGames</h1>
+		<h1 href="..">SoulGames</h1>
 		<h3>Dein RPG Netzwerk</h3>
 	</header>
-	
-	<section id="about">
-		<h1>Unser Server</h1>
-		<p>Deswegen solltest du bei uns spielen!</p>
-		<hr>
-		<div class="row features">
-			<div class="col-md feature">
-				<i class="fas fa-question-circle"></i>
-				<h2>Schnelle Hilfe</h2>
-				<p>Unser Team hilft dir jederzeit und beantwortet deine Fragen!</p>
-			</div>
-			<div class="col-md feature">
-				<i class="fas fa-users feature"></i>
-				<h2>Unsere Community</h2>
-				<p>Jeder neuer Tag mit unserer Community macht einen riesen Spaß!</p>
-			</div>
-			<div class="col-md feature">
-				<i class="fas fa-shield-alt feature"></i>
-				<h2>Deine eigene Burg</h2>
-				<p>Joine unserem Discord und bewerbe dich für deine eigene Burg!</p>
-			</div>
-		</div>
-
-		<div class="row features">
-			<div class="col-md feature">
-				<i class="fas fa-wrench"></i>
-				<h2>Selbst programmierte Plugins</h2>
-				<p>Wir haben viele von unseren Plugins selbst Programmiert!</p>
-			</div>
-			<div class="col-md feature">
-				<i class="fas fa-fighter-jet"></i>
-				<h2>Schnelle Server = Mehr Spaß</h2>
-				<p>Unsere Server sind schnell, so das du immer ein niedrigen Ping hast!</p>
-			</div>
-		</div>
-
-		<div class="row features">
-			<div class="col-md feature">
-				<i class="fas fa-comment-dots"></i>
-				<h2>Und noch viele mehr..</h2>
-				<p>Komm einfach auf den Minecraft-Server und entdecke dein RPG Server</p>
-			</div>
-		</div>
-	</section>
-	
-	<section id="banner" class="parallax">
-	</section>
 
 	<section id="gamemodes">
-		<h1>Über uns</h1>
-		<p>Wir haben schon viel erlebt, nur du fehlst und noch!</p>
-		<hr>
+		<h1 id="beta">Beta Access</h1>
+		<hr><br>
+		  
+		
+	<?php
+      if(isset($_POST["submit"])){
+        require("mysql.php");
+		$stmt = $mysql->prepare("SELECT * FROM betakeys WHERE BETAPW = :betapwk");
+        $stmt->bindParam(":betapwk", $_POST[betapw]);
+        $stmt->execute();
+        $count = $stmt->rowCount();
+        if($count == 1){
+          $row = $stmt->fetch();
+		  if($_POST["betapw"] == $row["BETAPW"]){
+			require("mysql.php");
+
+			$stmtd = $mysql->prepare("DELETE FROM betakeys WHERE BETAPW = :betapwk;");
+			$stmtd->bindParam(":betapwk", $_POST["betapw"]);
+			$stmtd->execute();
+			
+        	$stmti = $mysql->prepare('INSERT INTO betausers (BETAPW, isB) VALUES (:username, "1")');
+			$stmti->bindParam(":username", $_POST[username], PDO::PARAM_STR);
+			$stmti->execute();
+
+			echo "Der Betakey wurde erfolgreich eingelöst. <br>";
+          } else {
+            echo "Der Betakey ist falsch. <br>";
+          }
+        } else {
+			echo "Der Betakey ist falsch. <br>";
+        }
+      }
+    ?>
+		<br>
+		<form action="index.php" method="post">
 		<div class="row fixed-width">
-			<div class="col-md mode ">
-				<h2>DAS BESTE RPG FEELING</h2>
-				<p>Wir haben eine gute Community. Aktuell sind wir noch am Start des Servers, jedoch werden schon fleissig Burgen, Schlösser, und mehr gebaut. Du kannst Kriege mit anderen Burgen führen oder auch einfach einen friedlichen Freundschaftsvertrag machen. Falls du nicht soo viel Verantwortung tragen willst, kannst du auch einfach Bürger einer Burg sein.</p>
-			</div>
-			<div class="col-md img ">
-				<img class="res-img" src="src/img/1.png">
+			<div class="col-md ">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+					  <span class="input-group-text" id="basic-addon1">Username</span>
+					</div>
+					<input name="username" type="text" class="form-control" placeholder="Dein Minecraft Name" aria-label="Username" aria-describedby="basic-addon1" required>
+				  </div>
+
+				  <div class="input-group mb-3">
+					<div class="input-group-prepend">
+					  <span class="input-group-text" id="basic-addon1">Betakey</span>
+					</div>
+					<input name="betapw" type="text" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX" aria-label="Betakey" aria-describedby="basic-addon1" required>
+				  </div>
 			</div>
 		</div>
-		<div class="row fixed-width">
-			<div class="col-md img">
-				<img class="res-img" src="src/img/2.png">
-			</div>
-			<div class="col-md mode">
-				<h2>WIR SIND FÜR DICH DA</h2>
-				<p>Wir sind fast jederzeit für dich erreichbar. Sei es auf dem RPG Server oder auf dem Discord. Du kannst unserem Team jederzeit fragen stellen. Es gibt keine dummen Fragen. Falls du gerade Langeweile hast, und nicht auf den Minecraft-Server kannst, kannst du selbstverständlich mit uns und der Community auf dem Discord chatten. Es macht einen riesen Spaß!</p>
-			</div>
-		</div>
+
+		<button type="submit" class="btn btn-primary" name="submit">Betakey einlösen</button>
+		</form>
+
 	</section>
 
-	<!--<section id="banner2" class="parallax">
-	</section>-->
-	
-	
-	<!-- Vote Section --><!--
-	<section id="vote">
-		<i class="fas fa-poll" style="font-size: 66px"></i>
-		<h1>Vote</h1>
-		<p>Vote für uns für coole Geschenke</p>
-		<hr>
-		<div class="row votelist">
-			<div class="col-md voteblock">
-				<h2>Server List #1</h2>
-				<a href="#">Vote now</a><br><br>
-			</div>
-			<div class="col-md voteblock">
-				<h2>Server List #2</h2>
-				<a href="#">Vote now</a><br><br>
-			</div>
-		</div>
-	</section>-->
-	<!-- End Vote Section -->
-
-	<section id="banner3" class="parallax">
+	<section id="banner2" class="parallax">
 	</section>
 
 	<footer>
 		<div class="footer">
 			<div class="copyright-notice">
 				<p>&copy; SoulGames <script>document.write(new Date().getFullYear())</script></p>
-				<a href="kontakt">Kontakt</a> | <a href="impressum">Impressum</a>
+				<a href="../kontakt">Kontakt</a> | <a href="../impressum">Impressum</a>
 			</div>
 		</div>
 	</footer>
 
 	<!-- Smooth Scrolling Script (from https://goo.gl/uWLqWu) | Do not touch if you don't know what you're doing! Now in local dir-->
-	<script src="src/js/jquery/jquery.min.js"></script>
+	<script src="../src/js/jquery/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
 		  // Add smooth scrolling to all links
@@ -246,5 +211,6 @@
 	    document.documentElement.scrollTop = 0;
 	}
 	</script>
+
 </body>
 </html>

@@ -65,6 +65,7 @@
 			  <a href="https://forum.SoulGames.de" class="left">Forum</a>
 			  <a href="../news" class="left">News</a>
 			  <a href="" class="left">Change Log</a>
+			  <a href="../beta/" class="left">Beta Access</a>
 			  <a href="https://invite.teamspeak.com/SoulGames" class="fab fa-teamspeak right" target="_blank"></a>
 			  <a href="https://discord.gg/E6xHYky" class="fab fa-discord right" target="_blank"></a>
 			  <a href="https://instagram.com/SoulGames_RPG" class="fab fa-instagram right" target="_blank"></a>
@@ -87,7 +88,7 @@
             <?php 
                 require("../admin/mysql.php");
 
-                $stmt = $mysql->prepare("SELECT * FROM changelog LIMIT 10");
+                $stmt = $mysql->prepare("SELECT * FROM `changelog` ORDER BY `changelog`.`CREATED_AT` DESC");
                 $stmt->execute();
 
                 $changes = $stmt->rowCount();
@@ -95,10 +96,13 @@
                     echo "Es wurden keine Änderungen gefunden.";
                 } else {
                     while($row = $stmt->fetch()) {
-                    ?>
-                    <h1><?php echo htmlentities($row["TITLE"]) ?></h1>
-                    <p><?php echo htmlentities($row["CHANGENEWS"]) ?></p>
-                    <p><?php echo date("d.m.Y", $row["CREATED_AT"]) ?></p>
+					?>
+          <h1><?php echo htmlentities($row["TITLE"]) ?></h1>
+          <p><?php echo htmlentities($row["CHANGENEWS"]) ?></p>
+					<p><?php echo date("d.m.Y", $row["CREATED_AT"]) ?></p>
+					<p>Kategorie: <?php echo htmlentities($row["CAT"]) ?></p>
+					<hr>
+
                     <?php
                 }
             }
@@ -114,7 +118,7 @@
 	<footer>
 		<div class="footer">
 			<div class="copyright-notice">
-				<p>&copy; SoulGames</p>
+				<p>&copy; SoulGames <script>document.write(new Date().getFullYear())</script></p>
 				<a href="../kontakt">Kontakt</a> | <a href="../impressum">Impressum</a>
 			</div>
 		</div>
