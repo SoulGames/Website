@@ -40,5 +40,6 @@
         <input class="form-control" type="password" name="pw" placeholder="Passwort" required><br>
         <button class="btn btn-primary" type="submit" name="submit">Einloggen</button>
     </form>
+    </div>
   </body>
 </html>
