@@ -29,7 +29,7 @@ if(!isset($_SESSION["username"])){
 
     <center>
         <img src="../../src/img/logo.png" alt="SoulGames.de RPG">
-        <h1>Admin Controll Panel</h1>
+        <h1>Admin Control Panel</h1>
         <br>
     </center>
 
