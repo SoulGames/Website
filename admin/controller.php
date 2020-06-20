@@ -1,8 +1,10 @@
 <?php
 session_start();
 if(!isset($_SESSION["username"])){
-  header("Location: ../index.php");
-  exit;
+    if(!isset($_SESSION["pw"])) {
+    header("Location: ../index.php");
+    exit;
+    }
 }
 ?>
 <!DOCTYPE html>
