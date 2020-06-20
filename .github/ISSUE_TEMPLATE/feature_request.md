@@ -9,6 +9,10 @@ assignees: ''
 
 _Describe what dos the new feature_
 
+Needed
+- If something is needed, write is here
+- For Example: Issue #123
+
 ToDo: 
 - [ ] Something
 - [ ] And this
