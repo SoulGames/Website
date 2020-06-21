@@ -1,6 +1,6 @@
 # Security Policy
 
-## Current version `2.0.2`
+## Current version `2.0.3`
 
 ## Supported Versions
 
@@ -9,7 +9,8 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.0.2   | :white_check_mark: |
+| 2.0.3   | :white_check_mark: |
+| 2.0.2   | :x: |
 | 2.0.1   | :x: |
 | < 2.0   | :x:                |
 
