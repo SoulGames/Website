@@ -62,7 +62,7 @@
 	<div class="topnav" id="myTopnav">
 		<div class="max-width">
 			  <a href="../team" class="left">Team</a>
-			  <a href="https://forum.SoulGames.de" class="left">Forum</a>
+			  <a href="../forum" class="left">Forum</a>
 			  <a href="../news" class="left">News</a>
 			  <a href="" class="left">Change Log</a>
 			  <a href="../beta/" class="left">Beta Access</a>
