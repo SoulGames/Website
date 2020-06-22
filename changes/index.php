@@ -61,10 +61,10 @@
 	<!-- Navbar -->
 	<div class="topnav" id="myTopnav">
 		<div class="max-width">
-		<a href="/team" class="left">Team</a>
+			<a href="/team" class="left">Team</a>
 			<a href="https://forum.SoulGames.de" class="left">Forum</a>
 			<a href="/news" class="left">News</a>
-			<a href="/changes" class="left">Change Log</a>
+			<a href="javascript:;" class="left">Change Log</a>
 			<a href="/beta" class="left">Beta Access</a>
 			<a href="https://invite.teamspeak.com/SoulGames" class="fab fa-teamspeak right" target="_blank"></a>
 			<a href="https://discord.gg/E6xHYky" class="fab fa-discord right" target="_blank"></a>
