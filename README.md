@@ -6,6 +6,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/SoulGames/Website?style=for-the-badge)](https://github.com/SoulGames/Website/network/members)
 [![GitHub stars](https://img.shields.io/github/stars/SoulGames/Website?style=for-the-badge)](https://github.com/SoulGames/Website/stargazers)
 [![GitHub watchers](https://img.shields.io/github/watchers/SoulGames/Website?style=for-the-badge)](https://github.com/SoulGames/Website/watchers)
+[![time tracker](https://wakatime.com/badge/github/StackNeverFlow/Website.svg)](https://wakatime.com/badge/github/StackNeverFlow/Website)
 
 </center>
 

@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION["username"])){
     if(isset($_SESSION["pw"])) {
-    require("mysql.php");
+    require("../mysql.php");
     $stmt = $mysql->prepare("SELECT * FROM accounts WHERE PASSWORD = :passw");
     $stmt->bindParam(":passw", $_SESSION["pw"]);
     $stmt->execute();
