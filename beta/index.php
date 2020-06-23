@@ -9,7 +9,7 @@
 	<link rel="shortcut icon" type="image/png" href="../src/img/logo.png"/>
 
 	<!-- SEO -->
-	<meta name="title" content="SoulGames.DE | Impressum">
+	<meta name="title" content="SoulGames.DE | Beta Access">
 	<meta name="description" content="Dies ist die offiziele Webseite von dem SoulGames.DE Server Netwerk.">
 	<meta name="keywords" content="Soulgames, Soulgames.de, RPG, Sevrver, Soulgames RPG, Minecraft RPG, Minecraft RPG Server, SoulGames Netzwerk">
 	<meta name="robots" content="index, follow">
@@ -63,16 +63,17 @@
 	<!-- Navbar -->
 	<div class="topnav" id="myTopnav">
 		<div class="max-width">
-			  <a href="../team" class="left">Team</a>
-			  <a href="https://forum.SoulGames.de" class="left">Forum</a>
-			  <a href="../news" class="left">News</a>
-			  <a href="../changes/" class="left">Change Log</a>
-			  <a href="#" class="left">Beta Access</a>
-			  <a href="https://invite.teamspeak.com/SoulGames" class="fab fa-teamspeak right" target="_blank"></a>
-			  <a href="https://discord.gg/E6xHYky" class="fab fa-discord right" target="_blank"></a>
-			  <a href="https://instagram.com/SoulGames_RPG" class="fab fa-instagram right" target="_blank"></a>
-		  	  <a href="https://twitter.com/soulgames_rpg" class="fab fa-twitter right" target="_blank"></a>
-			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+			<a href="https://SoulGames.DE" class="left"><i class="fas fa-home"></i></a>
+			<a href="../team" class="left">Team</a>
+			<a href="https://forum.SoulGames.de" class="left">Forum</a>
+			<a href="../news" class="left">News</a>
+			<a href="../changes/" class="left">Change Log</a>
+			<a href="../beta/" class="left">Beta Access</a>
+			<a href="https://invite.teamspeak.com/SoulGames" class="fab fa-teamspeak right" ></a>
+			<a href="https://discord.gg/E6xHYky" class="fab fa-discord right" ></a>
+			<a href="https://instagram.com/SoulGames_RPG" class="fab fa-instagram right" ></a>
+		  	<a href="https://twitter.com/soulgames_rpg" class="fab fa-twitter right"></a>
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 		</div>
 	</div>
 
@@ -88,7 +89,7 @@
 		
 	<?php
       if(isset($_POST["submit"])){
-        require("mysql.php");
+        require("../admin/mysql.php");
 		$stmt = $mysql->prepare("SELECT * FROM betakeys WHERE BETAPW = :betapwk");
         $stmt->bindParam(":betapwk", $_POST[betapw]);
         $stmt->execute();
@@ -96,13 +97,13 @@
         if($count == 1){
           $row = $stmt->fetch();
 		  if($_POST["betapw"] == $row["BETAPW"]){
-			require("mysql.php");
+			require("../admin/mysql.php");
 
 			$stmtd = $mysql->prepare("DELETE FROM betakeys WHERE BETAPW = :betapwk;");
 			$stmtd->bindParam(":betapwk", $_POST["betapw"]);
 			$stmtd->execute();
 			
-        	$stmti = $mysql->prepare('INSERT INTO betausers (BETAPW, isB) VALUES (:username, "1")');
+        	$stmti = $mysql->prepare('INSERT INTO betausers (USERNAME, isB) VALUES (:username, "1")');
 			$stmti->bindParam(":username", $_POST[username], PDO::PARAM_STR);
 			$stmti->execute();
 

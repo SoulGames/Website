@@ -1,6 +1,5 @@
 maintenance = false
 
-console.log(window.location.pathname)
 if (maintenance == true) {
     if (!(window.location.pathname == "/maintenance/")) {
         window.location.href = "/maintenance/";
