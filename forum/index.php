@@ -62,7 +62,7 @@
 	<div class="topnav" id="myTopnav">
 		<div class="max-width">
 			  <a href="/team" class="left">Team</a>
-			  <a href="#" class="left">Forum</a>
+			  <a href="javascript:;" class="left">Forum</a>
 			  <a href="/news" class="left">News</a>
 			  <a href="/changes" class="left">Change Log</a>
 			  <a href="/beta" class="left">Beta Access</a>
