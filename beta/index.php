@@ -82,6 +82,16 @@
 		<h3>Dein RPG Netzwerk</h3>
 	</header>
 
+	<noscript>
+		<section id="banner" class="parallax">
+		</section>
+		<section id="about">
+			<div class="alert alert-warning" role="alert">
+				<b>Dein Browser hat JavaScript deaktiviert</b>. Ein paar Funktionen können deswegen nicht aktiviert werden.
+			</div>
+		</section>
+	</noscript>
+
 	<section id="gamemodes">
 		<h1 id="beta">Beta Access</h1>
 		<hr><br>
