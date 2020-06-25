@@ -87,9 +87,11 @@
 
                     $accountsStmt = $mysql->prepare("
 						CREATE TABLE `accounts` (
+							`ID` INT(11) NOT NULL AUTO_INCREMENT,
 							`USERNAME` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
 							`PASSWORD` VARCHAR(200) NOT NULL COLLATE 'utf8mb4_general_ci',
-							UNIQUE INDEX `USERNAME` (`USERNAME`) USING BTREE
+							UNIQUE INDEX `USERNAME` (`USERNAME`) USING BTREE,
+							UNIQUE INDEX `ID` (`ID`) USING BTREE
 						)
 						COLLATE='utf8mb4_general_ci'
 						ENGINE=InnoDB
