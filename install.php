@@ -69,22 +69,62 @@
                 {
                     $mysql = new PDO("mysql:host=$host;dbname=$name", $user, $pass);
 
-                    $changelogStmt = $mysql->prepare("CREATE TABLE changelog(
-                        ID INT(11) AUTO_INCREMENT UNIQUE,
-                        TITLE VARCHAR(255),
-                        CHANGENEWS VARCHAR(2550),
-                        CREATED_AT VARCHAR(255)
-                    );");
+                    $changelogStmt = $mysql->prepare("
+						CREATE TABLE `changelog` (
+							`ID` INT(11) NOT NULL AUTO_INCREMENT,
+							`TITLE` VARCHAR(255) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+							`CHANGENEWS` VARCHAR(5000) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+							`CREATED_AT` DATETIME NULL DEFAULT NULL,
+							`CAT` VARCHAR(255) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+							UNIQUE INDEX `ID` (`ID`) USING BTREE
+						)
+						COLLATE='latin1_swedish_ci'
+						ENGINE=InnoDB
+						;
+					");
                     $changelogStmt->execute();
 
-                    $accountsStmt = $mysql->prepare("CREATE TABLE accounts(
-                        USERNAME VARCHAR(255) UNIQUE,
-                        PASSWORD VARCHAR(255)
-                    );");
+
+                    $accountsStmt = $mysql->prepare("
+						CREATE TABLE `accounts` (
+							`USERNAME` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+							`PASSWORD` VARCHAR(200) NOT NULL COLLATE 'utf8mb4_general_ci',
+							UNIQUE INDEX `USERNAME` (`USERNAME`) USING BTREE
+						)
+						COLLATE='utf8mb4_general_ci'
+						ENGINE=InnoDB
+						;
+					");
                     $accountsStmt->execute();
+					
+					
+					$betakeysStmt = $mysql->prepare("
+						CREATE TABLE `betakeys` (
+							`ID` INT(11) NOT NULL AUTO_INCREMENT,
+							`BETAPW` VARCHAR(100) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+							UNIQUE INDEX `ID` (`ID`) USING BTREE,
+							UNIQUE INDEX `BETAPW` (`BETAPW`) USING BTREE
+						)
+						COLLATE='utf8mb4_general_ci'
+						ENGINE=InnoDB
+						;
+					");
+                    $betakeysStmt->execute();
                     
 
-
+					$betausersStmt = $mysql->prepare("
+						CREATE TABLE `betausers` (
+							`ID` INT(11) NOT NULL AUTO_INCREMENT,
+							`USERNAME` VARCHAR(100) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+							`isB` TINYINT(1) NULL DEFAULT NULL,
+							UNIQUE INDEX `ID` (`ID`) USING BTREE,
+							UNIQUE INDEX `USERNAME` (`USERNAME`) USING BTREE
+						)
+						COLLATE='utf8mb4_general_ci'
+						ENGINE=InnoDB
+						;
+					");
+                    $betausersStmt->execute();
                 }
                 catch (PDOException $e)
                 {
