@@ -17,7 +17,7 @@
       <?php
       if(isset($_POST["submit"])){
         require("mysql.php");
-        $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user");
+        $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user AND USING_BY=1;");
         $stmt->bindParam(":user", $_POST["username"]);
         $stmt->execute();
         $count = $stmt->rowCount();
