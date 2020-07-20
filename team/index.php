@@ -97,19 +97,19 @@
 		<p>Die Teammitglieder von SoulGames</p>
 		<hr>
 		<div class="row stafflist">
-			<div class="col-md staffblock">
+			<div class="col-md staffblock" id="RedImSky">
 				<img width="100px;" src="https://minotar.net/helm/RedImSky/100.png">
 				<h2 style="font-weight: 600; margin-top: 10px;">RedImSky</h2>
 				<p>RedImSky</p>
 				<span class="badge badge-danger">König</span>
 			</div>
-			<div class="col-md staffblock">
+			<div class="col-md staffblock" id="illegual">
 				<img width="100px;" src="https://minotar.net/helm/Egon/100.png">
 				<h2 style="font-weight: 600; margin-top: 10px;">illegual</h2>
 				<p>Egon</p>
 				<span class="badge badge-danger">Herzog</span>
 			</div>
-			<div class="col-md staffblock">
+			<div class="col-md staffblock" id="NoNamePro0">
 				<img width="100px;" src="https://minotar.net/helm/NoNamePro0/100.png">
 				<h2 style="font-weight: 600; margin-top: 10px;">No Name Pro</h2>
 				<p>NoNamePro0</p>
@@ -117,19 +117,19 @@
 			</div>
 		</div>
 		<div class="row stafflist">
-			<div class="col-md staffblock">
+			<div class="col-md staffblock" id="StackNeverFlow">
 				<img width="100px;" src="https://minotar.net/helm/Takitodoari/100.png">
 				<h2 style="font-weight: 600; margin-top: 10px;">StackNeverFlow</h2>
 				<p>Takitodoari</p>
 				<span class="badge badge-primary">Dev-Leitung</span>
 			</div>
-			<div class="col-md staffblock">
+			<div class="col-md staffblock" id="Hax">
 				<img width="100px;" src="https://minotar.net/helm/Hax6775/100.png">
 				<h2 style="font-weight: 600; margin-top: 10px;">Hax</h2>
 				<p>Hax6775</p>
 				<span class="badge badge-primary">Developer</span>
 			</div>
-			<div class="col-md staffblock">
+			<div class="col-md staffblock" id="xVoiceSyntax">
 				<img width="100px;" src="https://minotar.net/helm/xVoiceSyntax/100.png">
 				<h2 style="font-weight: 600; margin-top: 10px;">xVoiceSyntax</h2>
 				<p>xVoiceSyntax</p>
@@ -137,19 +137,19 @@
 			</div>
 		</div>
 		<div class="row stafflist">
-			<div class="col-md staffblock">
+			<div class="col-md staffblock" id="SneaX">
 				<img width="100px;" src="https://minotar.net/helm/SneaX_Twitch/100.png">
 				<h2 style="font-weight: 600; margin-top: 10px;">SneaX</h2>
 				<p>SneaX_Twitch</p>
 				<span class="badge badge-warning">Helfer+</span>
 			</div>
-			<div class="col-md staffblock">
+			<div class="col-md staffblock" id="XEfnexX">
 				<img width="100px;" src="https://minotar.net/helm/XEfnexX/100.png">
 				<h2 style="font-weight: 600; margin-top: 10px;">XEfnexX</h2>
 				<p>XEfnexX</p>
 				<span class="badge badge-warning">Helfer</span>
 			</div>
-			<div class="col-md staffblock">
+			<div class="col-md staffblock" id="thorbino">
 				<img width="100px;" src="https://minotar.net/helm/thorbino2006/100.png">
 				<h2 style="font-weight: 600; margin-top: 10px;">!thorbino</h2>
 				<p>thorbino2006</p>
